@@ -57,6 +57,7 @@ extra:
     - jdblischak
     - cbrueffer
     - dbast
+    - conda-forge/r
 
 # Package: BGLR
 # Version: 1.0.8

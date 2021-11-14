@@ -1,4 +1,4 @@
-{% set version = '1.0.8' %}
+{% set version = "1.0.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BGLR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BGLR/BGLR_{{ version }}.tar.gz
-  sha256: 5e969590d80b2f272c02a43b487ab1ffa13af386e0342993e6ac484fc82c9b95
+  sha256: 440a96f9f502e0d6ecc8c00720d1ccdbab5ee8223e1def6c930edaa9a9de9099
 
 build:
-  merge_build_host: True  # [win]
-  number: 1004
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -31,10 +31,12 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-mass
     - r-truncnorm
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
+    - r-mass
     - r-truncnorm
 
 test:

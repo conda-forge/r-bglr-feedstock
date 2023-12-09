@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BGLR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BGLR/BGLR_{{ version }}.tar.gz
-  sha256: 97c5bb8a461eb408e907693811b2d917efc993000da06591a83a3f5529451ea7
+  sha256: 5997afed8429517ee301d14e2790f6223be910c03b9133d5ce3806cc324b62f3
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/

@@ -1,4 +1,4 @@
-{% set version = "1.1.3" %}
+{% set version = "1.1.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BGLR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BGLR/BGLR_{{ version }}.tar.gz
-  sha256: e9a290f6094a688e422d010f743ecc6a692af8cb693f42a15230afb6dcafa020
+  sha256: 1122549fd53e1d050b99bebae3e56f2e3d2135c6b622acba9fd4bfa14a97c792
 
 build:
   number: 0
